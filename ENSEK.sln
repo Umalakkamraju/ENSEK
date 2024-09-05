@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ENSEK", "ENSEK\ENSEK.csproj", "{359587DE-E921-44F3-AA2D-B42838766B1B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E5CC3D3E-453D-4C4A-A0A7-27646502ED13}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.md = ReadMe.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ENSEKTests1", "ENSEKTests1\ENSEKTests1.csproj", "{A8A3C540-B77F-423D-B192-8EE25D51617E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{359587DE-E921-44F3-AA2D-B42838766B1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{359587DE-E921-44F3-AA2D-B42838766B1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{359587DE-E921-44F3-AA2D-B42838766B1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{359587DE-E921-44F3-AA2D-B42838766B1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8A3C540-B77F-423D-B192-8EE25D51617E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8A3C540-B77F-423D-B192-8EE25D51617E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8A3C540-B77F-423D-B192-8EE25D51617E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8A3C540-B77F-423D-B192-8EE25D51617E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2267055A-1382-4B13-9E82-657B568BE27C}
+	EndGlobalSection
+EndGlobal
