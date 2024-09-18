@@ -57,12 +57,16 @@ namespace ENSEK.Controllers
                     }
                 });
 
+                //HashSet<T> to ensure uniqueness and to manage internal storage eiliminating duplicates
+                HashSet<MeterReadingModel> uniqueueRecords = new HashSet<MeterReadingModel>(validReadings);
+
+
 
                 // This is to log the number of valid readings before insertings
                 _logger.LogInformation("Inserting {ValidReadingsCount} valid readings into the database", validReadings.Count);
 
                 // Perform bulk insertion of valid readings. This to increase throughput
-                await _repository.BulkInsertMeterReadingsAsync(validReadings.ToList());
+                await _repository.BulkInsertMeterReadingsAsync(uniqueueRecords.ToList());
 
 
 

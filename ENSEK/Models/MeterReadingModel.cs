@@ -2,7 +2,9 @@
 
 namespace ENSEK.Models
 {
-    public class MeterReadingModel
+
+    //for value based equality; immutable
+    public record MeterReadingModel
     {
         public int AccountId { get; set; }
         public DateTime MeterReadingDateTime { get; set; }

@@ -31,4 +31,8 @@
     <_GlobalJsonStartingDir Remove="NewFolder1\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+
 </Project>

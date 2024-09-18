@@ -1,4 +1,3 @@
-using ENSEK.Data;
 using ENSEK.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -28,12 +27,10 @@ public class Program
         builder.Logging.ClearProviders();
         builder.Logging.AddSerilog();
 
-
-
         // Adding services to the container
-        builder.Services.AddControllers();
+        builder.Services.AddControllers();        
 
-
+        // enable API documentation generation for swagger
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 
@@ -42,9 +39,7 @@ public class Program
         builder.Services.AddTransient<IMeterReadingValidator, MeterReadingValidator>();
         builder.Services.AddTransient<IMeterReadingParser, MeterReadingParser>();
 
-        // Configure database context
-        builder.Services.AddDbContext<MeterReadingContext>(options =>
-            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+        //build web app with all configured services
         var app = builder.Build();
 
 
@@ -58,14 +53,16 @@ public class Program
 
         app.UseHttpsRedirection();
 
+        app.UseRouting();
+
         app.UseAuthorization();
 
 
         app.MapControllers();
-
-
+       
 
         Log.Information("Starting up the application...");
+        //Starts the application and begins listening for HTTP requests.
         app.Run();
     }
 }
